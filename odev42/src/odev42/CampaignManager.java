@@ -25,15 +25,22 @@ public class CampaignManager implements ICampaignService {
 	@Override
 	public void campaignDelete(Game game) {
 
-		for (int k=0; k< this._campaignGames.length;k++)
-		for (int i = 0; i < this._campaignGames.length; i++) {
-			if ((this._campaignGames[i].getGameName() == game.getGameName())
-					|| (this._campaignGames[i].getGameId() == game.getGameId())) {
-				
-				i=i+1;
-				
-			} 
-			temp[k]=this._campaignGames[i];
+		for (int k = 0; k < this._campaignGames.length; k++) {
+			for (int i = 0; i < this._campaignGames.length; i++) {
+				if ((this._campaignGames[i].getGameName() == game.getGameName())
+						|| (this._campaignGames[i].getGameId() == game.getGameId())) {
+
+					i = i + 1;
+
+				}
+				if (i < this._campaignGames.length) {
+					temp[k] = this._campaignGames[i];
+				} else {
+					this._campaignGames = temp;
+				}
+
+			}
+
 		}
 
 		System.out.println(game.getGameName() + " isimli oyunun kampanyasý son bulmuþtur.");
