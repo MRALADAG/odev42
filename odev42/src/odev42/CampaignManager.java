@@ -55,6 +55,18 @@ public class CampaignManager implements ICampaignService {
 	}
 
 	@Override
+	public boolean checkCampaignIs(Game game) {
+		for (Game game1 : this._campaignGames) {
+			if ((game1.getGameName() == game.getGameName()) || (game1.getGameId() == game.getGameId()))
+
+				return true;
+		}
+
+		return false;
+
+	}
+
+	@Override
 	public Game[] getAllCampaignGames() {
 		// TODO Auto-generated method stub
 		return this._campaignGames;

@@ -11,6 +11,12 @@ public class Main {
 
 		playerManager.add(player);
 
+		CampaignManager campaignManager = new CampaignManager();
+		campaignManager.campaignAdd(new Game(1, "WarCaraft"));
+
+		IOrderService orderService = new OrderManager(new MernisCustomerCheckService(), campaignManager);
+		orderService.gameOrder(player, new Game(1, "WarCaraft"));
+
 	}
 
 }

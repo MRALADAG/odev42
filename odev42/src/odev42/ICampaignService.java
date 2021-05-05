@@ -8,6 +8,8 @@ public interface ICampaignService {
 
 	void campaignUpdate(Game game);
 
+	boolean checkCampaignIs(Game game);
+
 	Game[] getAllCampaignGames();
 
 }
