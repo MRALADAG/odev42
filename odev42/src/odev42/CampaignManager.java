@@ -57,7 +57,7 @@ public class CampaignManager implements ICampaignService {
 	@Override
 	public Game[] getAllCampaignGames() {
 		// TODO Auto-generated method stub
-		return null;
+		return this._campaignGames;
 	}
 
 }
