@@ -1,5 +1,7 @@
 package odev42;
 
+import java.util.ArrayList;
+
 public interface ICampaignService {
 
 	void campaignAdd(Game game);
@@ -10,6 +12,6 @@ public interface ICampaignService {
 
 	boolean checkCampaignIs(Game game);
 
-	Game[] getAllCampaignGames();
+	ArrayList<Game> getAllCampaignGames();
 
 }
